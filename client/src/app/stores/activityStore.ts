@@ -41,7 +41,6 @@ class ActivityStore {
             });
         } catch (error) {
             runInAction('load activities error', () => {
-                console.log(error);
                 this.loadingInitial = false;
             });
         }
@@ -61,7 +60,6 @@ class ActivityStore {
                 });
             } catch (error) {
                 runInAction('get activity error', () => {
-                    console.log(error);
                     this.loadingInitial = false;
                 });
             }
@@ -87,7 +85,6 @@ class ActivityStore {
         } catch (error) {
             runInAction('create activity error', () => {
                 this.submitting = false;
-                console.log(error);
             });
         }
     };
@@ -104,7 +101,6 @@ class ActivityStore {
         } catch (error) {
             runInAction('editing activity error', () => {
                 this.submitting = false;
-                console.log(error);
             });
         }
     };
@@ -121,7 +117,6 @@ class ActivityStore {
             });
         } catch (error) {
             runInAction('delete activity error', () => {
-                console.log(error);
                 this.target = '';
                 this.submitting = false;
             });
