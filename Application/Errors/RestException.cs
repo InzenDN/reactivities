@@ -15,6 +15,5 @@ namespace Application.Errors
             Code = code;
             Errors = errors;
         }
-
     }
 }
